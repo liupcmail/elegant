@@ -4,6 +4,7 @@ export interface ThemeDescriptor {
 
 export const themes: ReadonlyArray<ThemeDescriptor> = [
   // Light Themes (alphabetical)
+  { name: 'elegant-light' },
   { name: 'ayu-light' },
   { name: 'light' },
   { name: 'catppuccin-latte' },
@@ -15,6 +16,7 @@ export const themes: ReadonlyArray<ThemeDescriptor> = [
   { name: 'tokyo-night-light' },
   { name: 'ulysses' },
   // Dark Themes (alphabetical)
+  { name: 'elegant-dark' },
   { name: 'ayu-dark' },
   { name: 'ayu-mirage' },
   { name: 'dark' },

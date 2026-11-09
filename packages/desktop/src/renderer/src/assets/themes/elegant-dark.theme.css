@@ -1,0 +1,275 @@
+/*
+ * Elegant Dark — the dark default theme of Elegant.
+ * GitHub Dark Default palette (canvas #0d1117, fg #e6edf3, link #58a6ff,
+ * code panel #161b22) — the dark sibling of elegant-light.
+ */
+
+:root {
+  --themeColor: #58a6ff;
+  --themeColor90: rgba(88, 166, 255, 0.9);
+  --themeColor80: rgba(88, 166, 255, 0.8);
+  --themeColor70: rgba(88, 166, 255, 0.7);
+  --themeColor60: rgba(88, 166, 255, 0.6);
+  --themeColor50: rgba(88, 166, 255, 0.5);
+  --themeColor40: rgba(88, 166, 255, 0.4);
+  --themeColor30: rgba(88, 166, 255, 0.3);
+  --themeColor20: rgba(88, 166, 255, 0.2);
+  --themeColor10: rgba(88, 166, 255, 0.1);
+
+  --highlightColor: rgba(88, 166, 255, 0.35);
+  --selectionColor: rgba(56, 139, 253, 0.25);
+  --editorColor: #e6edf3;
+  --editorColor80: rgba(230, 237, 243, 0.8);
+  --editorColor60: rgba(230, 237, 243, 0.6);
+  --editorColor50: rgba(230, 237, 243, 0.5);
+  --editorColor40: rgba(230, 237, 243, 0.4);
+  --editorColor30: rgba(230, 237, 243, 0.3);
+  --editorColor10: rgba(230, 237, 243, 0.1);
+  --editorColor04: rgba(230, 237, 243, 0.04);
+  --editorBgColor: #0d1117;
+  --deleteColor: #f85149;
+  --iconColor: #8b949e;
+  --codeBgColor: rgba(110, 118, 129, 0.4);
+  --codeBlockBgColor: #161b22;
+  --codeBlockColor: #e6edf3;
+  --footnoteBgColor: rgba(110, 118, 129, 0.1);
+  --inputBgColor: #161b22;
+  --focusColor: var(--themeColor);
+
+  --buttonFontColor: #e6edf3;
+  --buttonBgColor: #21262d;
+  --buttonBorder: 1px solid #30363d;
+  --buttonShadow: 0 0 transparent;
+  --buttonFontColorHover: #e6edf3;
+  --buttonBgColorHover: #30363d;
+  --buttonBorderHover: 1px solid #3d444d;
+  --buttonFontColorActive: #e6edf3;
+  --buttonBgColorActive: #3d444d;
+  --buttonBorderActive: 1px solid #6e7681;
+  --buttonFocusBorder: 1px solid var(--themeColor);
+
+  --buttonPrimaryFontColor: #ffffff;
+  --buttonPrimaryBgColor: #1f6feb;
+  --buttonPrimaryBorder: none;
+  --buttonPrimaryShadow: 0 0 transparent;
+  --buttonPrimaryFontColorHover: #ffffff;
+  --buttonPrimaryBgColorHover: #388bfd;
+  --buttonPrimaryBorderHover: none;
+  --buttonPrimaryFontColorActive: #ffffff;
+  --buttonPrimaryBgColorActive: #388bfd;
+  --buttonPrimaryBorderActive: none;
+  --buttonPrimaryFocusBorder: none;
+  --buttonPrimaryFocusShadow: inset 0 0 0 1px rgba(187, 209, 255, 0.5), 0 0 0 1px var(--themeColor);
+  --tableBorderColor: #30363d;
+
+  --headingColor: #f0f6fc;
+  --h1Color: #f0f6fc;
+  --h2Color: #f0f6fc;
+  --h3Color: #f0f6fc;
+  --h4Color: #f0f6fc;
+  --h5Color: #f0f6fc;
+  --h6Color: #8b949e;
+  --blockquoteTextColor: #8b949e;
+  --blockquoteBorderColor: #3b434b;
+  --hrColor: #21262d;
+  --linkColor: #58a6ff;
+  --strongColor: #f0f6fc;
+  --emColor: #e6edf3;
+  --listMarkerColor: #e6edf3;
+
+  --sideBarColor: #8b949e;
+  --sideBarIconColor: #8b949e;
+  --sideBarTitleColor: #f0f6fc;
+  --sideBarTextColor: #8b949e;
+  --sideBarBgColor: #010409;
+  --sideBarItemHoverBgColor: rgba(110, 118, 129, 0.15);
+  --itemBgColor: rgba(22, 27, 34, 0.6);
+
+  --floatFontColor: #e6edf3;
+  --floatBgColor: #161b22;
+  --floatHoverColor: #21262d;
+  --floatBorderColor: #30363d;
+  --maskColor: rgba(1, 4, 9, 0.85);
+  --editorAreaWidth: 800px;
+
+  --theme-color: var(--themeColor);
+  --highlight-color: var(--highlightColor);
+  --selection-color: var(--selectionColor);
+  --editor-color: var(--editorColor);
+  --editor-color-80: var(--editorColor80);
+  --editor-color-50: var(--editorColor50);
+  --editor-color-30: var(--editorColor30);
+  --editor-color-10: var(--editorColor10);
+  --editor-color-04: var(--editorColor04);
+  --editor-bg-color: var(--editorBgColor);
+  --editor-area-width: var(--editorAreaWidth);
+  --delete-color: var(--deleteColor);
+  --icon-color: var(--iconColor);
+  --code-bg-color: var(--codeBgColor);
+  --code-block-bg-color: var(--codeBlockBgColor);
+  --code-block-color: var(--codeBlockColor);
+  --table-border-color: var(--tableBorderColor);
+  --input-bg-color: var(--inputBgColor);
+  --button-font-color: var(--buttonFontColor);
+  --button-bg-color: var(--buttonBgColor);
+  --button-border: var(--buttonBorder);
+  --button-bg-color-hover: var(--buttonBgColorHover);
+  --button-border-hover: var(--buttonBorderHover);
+  --button-bg-color-active: var(--buttonBgColorActive);
+  --button-border-active: var(--buttonBorderActive);
+  --button-border-focus: var(--button-border);
+  --float-bg-color: var(--floatBgColor);
+  --float-hover-color: var(--floatHoverColor);
+  --float-border-color: var(--floatBorderColor);
+  --float-shadow: rgb(1 4 9 / 30%) 0 1px 3px, rgb(1 4 9 / 45%) 0 8px 24px;
+  --link-color: var(--linkColor);
+  --h1-color: var(--h1Color);
+  --h2-color: var(--h2Color);
+  --h3-color: var(--h3Color);
+  --h4-color: var(--h4Color);
+  --h5-color: var(--h5Color);
+  --h6-color: var(--h6Color);
+  --blockquote-text-color: var(--blockquoteTextColor);
+  --blockquote-border-color: var(--blockquoteBorderColor);
+  --strong-color: var(--strongColor);
+  --em-color: var(--emColor);
+  --list-marker-color: var(--listMarkerColor);
+  --hr-color: var(--hrColor);
+}
+
+/* Flat dark tab strip */
+.editor-tabs {
+  background: #161b22 !important;
+  box-shadow: none !important;
+}
+.editor-tabs:after {
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid #30363d;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.editor-tabs ul.tabs-container:after {
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid #30363d;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.title-bar-editor-bg.tabs-visible {
+  background: #161b22 !important;
+}
+.tabs-container > li {
+  background: none !important;
+}
+.tabs-container > li.active {
+  border: 1px solid #30363d;
+  border-top: none;
+  border-bottom: none;
+  background: var(--editorBgColor) !important;
+}
+.tabs-container > li.active:after {
+  top: 0 !important;
+  bottom: auto !important;
+  background: var(--themeColor) !important;
+}
+
+/* Same GitHub heading scale as the light theme, dark hairlines */
+.mu-container h1,
+.mu-container h2,
+.mu-container h3,
+.mu-container h4,
+.mu-container h5,
+.mu-container h6 {
+  color: var(--headingColor);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.mu-container h1 {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #21262d;
+}
+.mu-container h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #21262d;
+}
+.mu-container h3 {
+  font-size: 1.25em;
+}
+.mu-container h4 {
+  font-size: 1em;
+}
+.mu-container h5 {
+  font-size: 0.875em;
+}
+.mu-container h6 {
+  font-size: 0.85em;
+  color: #8b949e;
+}
+
+.mu-container strong {
+  color: var(--strongColor);
+}
+
+.mu-container blockquote {
+  background: transparent;
+  border-left: 0.25em solid #3b434b;
+  color: #8b949e;
+  padding: 0 1em;
+}
+.mu-container blockquote::before {
+  content: none;
+}
+
+.mu-container :not(pre) > code {
+  background: var(--codeBgColor);
+  color: inherit;
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.mu-container pre.ag-paragraph {
+  background: var(--codeBlockBgColor);
+  border-radius: 6px;
+}
+
+.mu-container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.mu-container table th,
+.mu-container table td {
+  border: 1px solid #30363d;
+  padding: 6px 13px;
+}
+.mu-container table th {
+  background: var(--codeBlockBgColor);
+  font-weight: 600;
+}
+.mu-container table tr {
+  background: transparent;
+}
+.mu-container table tbody tr:nth-child(2n) {
+  background: var(--codeBlockBgColor);
+}
+
+.mu-container hr {
+  border: none;
+  height: 0.25em;
+  background: #21262d;
+  margin: 24px 0;
+}
+
+.mu-container li.mu-list-item {
+  color: var(--editorColor);
+}

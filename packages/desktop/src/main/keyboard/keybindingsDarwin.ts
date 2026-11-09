@@ -85,7 +85,7 @@ const keybindings: Map<string, string> = new Map([
 
   ['view.read-only-mode', 'Command+Control+R'],
   ['view.command-palette', 'Command+Shift+P'],
-  ['view.source-code-mode', 'Command+Option+S'],
+  ['view.source-code-mode', 'Command+/'],
   ['view.typewriter-mode', 'Command+Option+T'],
   ['view.focus-mode', 'Command+Shift+J'],
   ['view.toggle-sidebar', 'Command+J'],

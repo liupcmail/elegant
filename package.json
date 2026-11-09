@@ -1,9 +1,9 @@
 {
   "name": "marktext-monorepo",
   "version": "0.24.0-dev",
-  "description": "MarkText monorepo root",
+  "description": "Elegant monorepo root (personal fork of MarkText)",
   "private": true,
-  "homepage": "https://github.com/marktext/marktext",
+  "homepage": "https://github.com/liupcmail/elegant",
   "packageManager": "pnpm@10.33.4",
   "engines": {
     "node": ">=22.12.0",

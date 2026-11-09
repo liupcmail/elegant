@@ -1,3 +1,11 @@
+> **Elegant** — this repository is a personal fork of
+> [MarkText](https://github.com/marktext/marktext) (MIT License), reworked with
+> a Typora-inspired user interface: bundled elegant-light/elegant-dark themes
+> as defaults, a Typora-style centered title bar, bottom-left word counter,
+> single-document windows, and `Cmd+/` source-code-mode shortcut. All credit
+> for the editor engine and the vast majority of the codebase goes to the
+> MarkText contributors — see LICENSE for attribution.
+
 <p align="center"><img src="docs/assets/logo-small.png" alt="MarkText" width="100" height="100"></p>
 
 <h1 align="center">MarkText</h1>

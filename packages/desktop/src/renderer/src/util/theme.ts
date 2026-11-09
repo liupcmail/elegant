@@ -11,6 +11,8 @@ import {
   materialDark,
   oneDark,
   ulysses,
+  elegantLight,
+  elegantDark,
   dracula,
   nord,
   catppuccinMocha,
@@ -79,6 +81,12 @@ export const addThemeStyle = (theme: string): void => {
       break
     case 'ulysses':
       themeStyleEle.innerHTML = patchTheme(ulysses())
+      break
+    case 'elegant-light':
+      themeStyleEle.innerHTML = patchTheme(elegantLight())
+      break
+    case 'elegant-dark':
+      themeStyleEle.innerHTML = patchTheme(elegantDark())
       break
     case 'graphite':
       themeStyleEle.innerHTML = patchTheme(graphite())

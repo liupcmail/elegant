@@ -18,34 +18,18 @@
         class="title"
         @dblclick.stop="toggleMaxmizeOnMacOS"
       >
-        <span v-if="!filename">MarkText</span>
+        <span v-if="!filename">Elegant</span>
         <span v-else>
           <span
             class="save-dot"
             :class="{ show: !isSaved }"
           />
-          <span class="path">
-            <bdi dir="ltr">
-              <span
-                v-for="(path, index) of paths"
-                :key="index"
-              >
-                {{ path }}
-                <el-icon
-                  class="path-arrow"
-                  :size="12"
-                >
-                  <ArrowRight />
-                </el-icon>
-              </span>
-              <span
-                class="filename"
-                :class="{ isOsx: platform === 'darwin' }"
-                @click="rename"
-              >
-                {{ filename }}
-              </span>
-            </bdi>
+          <span
+            class="filename"
+            :class="{ isOsx: platform === 'darwin' }"
+            @click="rename"
+          >
+            {{ filename }}
           </span>
         </span>
       </div>
@@ -60,16 +44,6 @@
         >
           <span class="text-center-vertical">&#9776;</span>
         </button>
-        <document-statistics
-          v-if="wordCount"
-          :pathname="pathname"
-          :word-count="wordCount"
-          :selection-word-count="selectionWordCount"
-          :is-saved="isSaved"
-          :read-only="!!currentFile?.readOnly"
-          :mode-changing="!!currentFile?.modeChanging"
-          @toggle-reading="setReadingMode"
-        />
       </div>
       <div
         v-if="titleBarStyle === 'custom' && !isFullScreen && !isOsx"
@@ -148,15 +122,11 @@ import { useLayoutStore } from '@/store/layout.js'
 import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 import { storeToRefs } from 'pinia'
 import { minimizePath, restorePath, maximizePath, closePath } from '../../assets/window-controls.js'
-import { PATH_SEPARATOR } from '../../config'
 import { isMac as isOsxPlatform } from '@/util'
-import { pathBreadcrumb } from './pathBreadcrumb'
 import { buildWindowTitle } from './windowTitle'
 import { useEditorStore } from '@/store/editor'
 import { useI18n } from 'vue-i18n'
-import { ArrowRight } from '@element-plus/icons-vue'
 import IconTooltip from '@/components/iconTooltip/index.vue'
-import DocumentStatistics from './documentStatistics.vue'
 import type { FileWordCount } from '@shared/types/files'
 
 interface ProjectInfo {
@@ -177,10 +147,6 @@ const props = defineProps<{
 const preferencesStore = usePreferencesStore()
 const layoutStore = useLayoutStore()
 const editorStore = useEditorStore()
-const { currentFile } = storeToRefs(editorStore)
-const setReadingMode = (readOnly: boolean): void => {
-  if (currentFile.value) void editorStore.SET_READ_ONLY(currentFile.value.id, readOnly)
-}
 const { t } = useI18n()
 
 const isOsx = isOsxPlatform
@@ -208,7 +174,6 @@ onMounted(async () => {
 const { titleBarStyle } = storeToRefs(preferencesStore)
 const { showTabBar } = storeToRefs(layoutStore)
 
-const paths = computed(() => pathBreadcrumb(props.pathname ?? '', PATH_SEPARATOR))
 
 const showCustomTitleBar = computed(() => {
   return titleBarStyle.value === 'custom' && !isOsx

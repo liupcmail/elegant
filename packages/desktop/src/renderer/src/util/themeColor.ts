@@ -3,6 +3,8 @@ import graphiteTheme from '../assets/themes/graphite.theme.css?inline'
 import materialDarkTheme from '../assets/themes/material-dark.theme.css?inline'
 import oneDarkTheme from '../assets/themes/one-dark.theme.css?inline'
 import ulyssesTheme from '../assets/themes/ulysses.theme.css?inline'
+import elegantLightTheme from '../assets/themes/elegant-light.theme.css?inline'
+import elegantDarkTheme from '../assets/themes/elegant-dark.theme.css?inline'
 
 import draculaTheme from '../assets/themes/dracula.theme.css?inline'
 import nordTheme from '../assets/themes/nord.theme.css?inline'
@@ -64,6 +66,8 @@ import nightfoxPrismTheme from '../assets/themes/prismjs/nightfox.theme.css?inli
 import cyberdreamPrismTheme from '../assets/themes/prismjs/cyberdream.theme.css?inline'
 import graphitePrismTheme from '../assets/themes/prismjs/graphite.theme.css?inline'
 import ulyssesPrismTheme from '../assets/themes/prismjs/ulysses.theme.css?inline'
+import elegantLightPrismTheme from '../assets/themes/prismjs/elegant-light.theme.css?inline'
+import elegantDarkPrismTheme from '../assets/themes/prismjs/elegant-dark.theme.css?inline'
 
 export const dark = (): string => {
   return darkTheme + '\n' + darkPrismTheme
@@ -83,6 +87,14 @@ export const oneDark = (): string => {
 
 export const ulysses = (): string => {
   return ulyssesTheme + '\n' + ulyssesPrismTheme
+}
+
+export const elegantLight = (): string => {
+  return elegantLightTheme + '\n' + elegantLightPrismTheme
+}
+
+export const elegantDark = (): string => {
+  return elegantDarkTheme + '\n' + elegantDarkPrismTheme
 }
 
 export const dracula = (): string => {

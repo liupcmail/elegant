@@ -1,7 +1,11 @@
 MIT License
 
+Copyright (c) 2026-present liupc (Elegant modifications)
 Copyright (c) 2017-present Luo Ran
 Copyright (c) 2018-present MarkText Contributors
+
+Elegant is a personal modified build based on MarkText
+(https://github.com/marktext/marktext), distributed under the same MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,34 +1,20 @@
 {
   "name": "marktext",
   "version": "0.24.0-dev",
-  "description": "MarkText",
+  "description": "Elegant",
   "main": "./out/main/index.js",
   "author": {
-    "name": "Jocs",
-    "email": "ransixi@gmail.com",
-    "url": "https://github.com/Jocs"
+    "name": "liupc"
   },
   "maintainer": [
     {
-      "name": "Jocs",
-      "email": "ransixi@gmail.com",
-      "url": "https://github.com/Jocs"
-    },
-    {
-      "name": "Felix Häusler",
-      "email": "hfelix@protonmail.ch",
-      "url": "https://github.com/fxha"
-    },
-    {
-      "name": "Tkaixiang",
-      "email": "tkaixiang@gmail.com",
-      "url": "https://github.com/Tkaixiang"
+      "name": "liupc"
     }
   ],
-  "homepage": "https://github.com/marktext/marktext",
+  "homepage": "https://github.com/liupcmail/elegant",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marktext/marktext.git"
+    "url": "git+https://github.com/liupcmail/elegant.git"
   },
   "scripts": {
     "minify-locales": "tsx ../../scripts/minify-locales.ts",

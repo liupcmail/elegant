@@ -14,6 +14,7 @@
       ref="mediaViewer"
       @open-change="viewerOpen = $event"
     />
+    <editor-footer />
     <el-dialog
       v-model="dialogTableVisible"
       :show-close="isShowClose"
@@ -121,6 +122,7 @@ import { exportStyledHTML, type HeaderFooterPart } from '@/util/exportHtml'
 import { applyCursor, isIndexCursor } from '@/util/cursor'
 import EditorSearch from '../search/index.vue'
 import MediaViewer from '../mediaViewer/index.vue'
+import EditorFooter from './editorFooter.vue'
 import bus from '@/bus'
 import { DEFAULT_EDITOR_FONT_FAMILY, DEFAULT_CODE_FONT_FAMILY } from '@/config'
 import notice from '@/services/notification'
