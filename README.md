@@ -1,215 +1,76 @@
-> **Elegant** — this repository is a personal fork of
-> [MarkText](https://github.com/marktext/marktext) (MIT License), reworked with
-> a Typora-inspired user interface: bundled elegant-light/elegant-dark themes
-> as defaults, a Typora-style centered title bar, bottom-left word counter,
-> single-document windows, and `Cmd+/` source-code-mode shortcut. All credit
-> for the editor engine and the vast majority of the codebase goes to the
-> MarkText contributors — see LICENSE for attribution.
+<p align="center"><img src="docs/assets/elegant-logo.png" alt="Elegant" width="120"></p>
 
-<p align="center"><img src="docs/assets/logo-small.png" alt="MarkText" width="100" height="100"></p>
+<h1 align="center">Elegant</h1>
 
-<h1 align="center">MarkText</h1>
+<p align="center">
+  <strong>A Typora-flavoured markdown editor built on the MarkText engine</strong><br>
+  基于 MarkText 引擎、界面交互对齐 Typora 的所见即所得 Markdown 编辑器
+</p>
 
-<div align="center">
-  <a href="https://twitter.com/intent/tweet?via=marktextme&url=https://github.com/marktext/marktext/&text=What%20do%20you%20want%20to%20say%20to%20app?&hashtags=happyMarkText">
-    <img src="https://img.shields.io/twitter/url/https/github.com/marktext/marktext.svg?style=for-the-badge" alt="twitter">
-  </a>
-</div>
-<div align="center">
-  <strong>:high_brightness: Next generation markdown editor :crescent_moon:</strong><br>
-  A simple and elegant open-source markdown editor that focused on speed and usability.<br>
-  <sub>Available for Linux, macOS and Windows.</sub>
-</div>
+---
 
-<br>
+> **Elegant** is a personal fork of [MarkText](https://github.com/marktext/marktext)
+> (MIT License). The editor engine and the vast majority of the codebase come
+> from MarkText — all credit goes to its contributors, see
+> [LICENSE](LICENSE) for attribution. This repository only layers a
+> Typora-inspired user interface on top and stays close to upstream for
+> future syncing.
 
-<div align="center">
-  <!-- License -->
-  <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/marktext/marktext.svg" alt="LICENSE">
-  </a>
-  <!-- Downloads total -->
-  <a href="https://github.com/marktext/marktext/releases">
-    <img src="https://img.shields.io/github/downloads/marktext/marktext/total.svg" alt="total download">
-  </a>
-  <!-- Downloads latest release -->
-  <a href="https://github.com/marktext/marktext/releases/latest">
-    <img src="https://img.shields.io/github/downloads/marktext/marktext/latest/total.svg" alt="latest download">
-  </a>
-  <!-- sponsors -->
-  <a href="https://opencollective.com/marktext">
-    <img src="https://opencollective.com/marktext/tiers/silver-sponsors/badge.svg?label=SilverSponsors&color=brightgreen" alt="sponsors">
-  </a>
-</div>
+## 与 MarkText 的差异
 
-<div align="center">
-  <h3>
-    <a href="https://marktext.me">
-      Website
-    </a>
-    <span> | </span>
-    <a href="https://github.com/marktext/marktext#features">
-      Features
-    </a>
-    <span> | </span>
-    <a href="https://github.com/marktext/marktext#download-and-installation">
-      Downloads
-    </a>
-    <span> | </span>
-    <a href="https://github.com/marktext/marktext#development">
-      Development
-    </a>
-    <span> | </span>
-    <a href="https://github.com/marktext/marktext#contribution">
-      Contribution
-    </a>
-  </h3>
-</div>
+Elegant 的改动集中在桌面层（`packages/desktop`），编辑内核 Muya 保持不动：
 
-<div align="center">
-  <sub>Translations:</sub>
-  <a href="docs/i18n/README-zh_cn.md#readme">
-    <span>:cn:</span>
-  </a>
-  <a href="docs/i18n/README-zh_tw.md#readme">
-    <span>:taiwan:</span>
-  </a>
-  <a href="docs/i18n/README-jp.md#readme">
-    <span>:jp:</span>
-  </a>
-  <a href="docs/i18n/README-fr.md#readme">
-    <span>:fr:</span>
-  </a>
-  <a href="docs/i18n/README-tr.md#readme">
-    <span>:tr:</span>
-  </a>
-  <a href="docs/i18n/README-es.md#readme">
-    <span>:es:</span>
-  </a>
-  <a href="docs/i18n/README-pt.md#readme">
-    <span>:portugal:</span>
-  </a>
-  <a href="docs/i18n/README-kr.md#readme">
-    <span>:kr:</span>
-  </a>
-  <a href="docs/i18n/README-bn.md#readme">
-    <span>:bangladesh:</span>
-  </a>
-</div>
+| 方面 | 变化 |
+|---|---|
+| 主题 | 新增 `elegant-light`（经典 GitHub Light 色板，默认）与 `elegant-dark`（GitHub Dark Default），跟随系统明暗自动切换 |
+| 窗口形态 | Typora 式单窗口单文档：新文件/新文件夹默认开新窗口，隐藏标签页 |
+| 标题栏 | 居中显示文件名（点击可重命名），移除路径面包屑 |
+| 状态栏 | 字数统计位于编辑区左下角，点击循环切换指标（字数/段落/字符），悬停展开明细（选区计数、只读模式、文件信息） |
+| 快捷键 | macOS 源码模式改为 `Cmd + /`（与 Typora 一致）；`Cmd+1..6` 标题、打字机/专注模式等本就与 Typora 相同 |
+| 图片粘贴 | 默认复制到 `./assets` 并以相对路径引用 |
+| 品牌与图标 | 更名 Elegant，原创应用图标（斜体衬线 e + 朱红「雅」印） |
 
-<div align="center">
-  <sub>This Markdown editor that could. Built with ❤︎ by
-    <a href="https://github.com/Jocs">Jocs</a> and
-    <a href="https://github.com/marktext/marktext/graphs/contributors">
-      contributors
-    </a>
-    .
-  </sub>
-</div>
+## 截图
 
-<br />
+| elegant-light | elegant-dark |
+|---|---|
+| ![light](docs/assets/elegant-light.png) | ![dark](docs/assets/elegant-dark.png) |
 
-<h2 align="center">Sponsors</h2>
+## 从源码构建
 
-MarkText is an open-source Markdown editor powered by the support of its community. If MarkText improves your workflow, please consider [sponsoring the project](https://github.com/sponsors/marktext). Thank you to all the sponsors ❤️
-
-**Special Sponsor**
-
-<table>
-<tr>
-<td width="182"><a href="https://serpapi.com/?utm_source=marktext"><img src="docs/assets/sponsors/serpapi.png" width="150"></a></td>
-<td align="left"><a href="https://serpapi.com/?utm_source=marktext">Scrape Google and other search engines from our fast, easy, and complete API.</a></td>
-</tr>
-</table>
-
-<!-- current-sponsors:start -->
-
-**Current Sponsors**
-
-[![Current sponsors](docs/assets/sponsors/current.svg)](https://github.com/sponsors/marktext)
-
-<!-- current-sponsors:end -->
-
-## Screenshot
-
-![](docs/assets/marktext.png?raw=true)
-
-## Features
-
-- Realtime preview (WYSIWYG) and a clean and simple interface to get a distraction-free writing experience.
-- Support [CommonMark Spec](https://spec.commonmark.org), [GitHub Flavored Markdown Spec](https://github.github.com/gfm/) and selective support [Pandoc markdown](https://pandoc.org/MANUAL.html#pandocs-markdown).
-- Markdown extensions such as math expressions (KaTeX), front matter and emojis.
-- Support paragraphs and inline style shortcuts to improve your writing efficiency.
-- Output **HTML** and **PDF** files.
-- Various [themes](https://marktext.me/docs/themes): **Cadmium Light**, **Material Dark** etc.
-- Various editing modes: **Source Code mode**, **Typewriter mode**, **Focus mode**.
-- Paste images directly from clipboard.
-
-## Download and Installation
-
-![platform](https://img.shields.io/static/v1.svg?label=Platform&message=Linux%20x64%2Farm64%20|%20macOS%20x64%2Farm64%20|%20Windows%20x64%2Farm64&style=for-the-badge)
-
-|               ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/mac-pass-sm.png)               |               ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/windows-pass-sm.png)               |              ![](https://raw.githubusercontent.com/wiki/ryanoasis/nerd-fonts/screenshots/v1.0.x/linux-pass-sm.png)              |
-| :-----------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
-| [![Download for macOS](https://img.shields.io/badge/macOS-Download-blue)](https://github.com/marktext/marktext/releases/latest) | [![Download for Windows](https://img.shields.io/badge/Windows-Download-blue)](https://github.com/marktext/marktext/releases/latest) | [![Download for Linux](https://img.shields.io/badge/Linux-Download-blue)](https://github.com/marktext/marktext/releases/latest) |
-
-Want to see new features of the latest version? Please refer to [CHANGELOG](https://marktext.me/docs/changelog).
-
-#### macOS
-
-Requires macOS 13 (Ventura) or later. Universal builds aren't published — pick the matching `arm64` or `x64` installer.
-
-You can either download the latest `marktext-mac-(arm64|x64)-%version%.dmg` from the [release page](https://github.com/marktext/marktext/releases/latest) or install MarkText using [**homebrew cask**](https://github.com/caskroom/homebrew-cask). To use Homebrew-Cask you just need to have [Homebrew](https://brew.sh/) installed.
+环境要求：Node.js ≥ 22.12、pnpm ≥ 10（推荐用 corepack 管理）、Git。
 
 ```bash
-brew install --cask mark-text
+git clone git@github.com:liupcmail/elegant.git
+cd elegant
+pnpm install          # 自动下载 Electron、编译原生模块
+pnpm run dev          # 开发模式（渲染层热重载）
 ```
 
-#### Windows
-
-Requires Windows 10 or 11. Both x64 and arm64 installers are published — pick the architecture that matches your machine.
-
-Simply download and install MarkText via the setup wizard (`marktext-win-(x64|arm64)-%version%-setup.exe`) and choose whether to install per-user or machine wide. Alternatively, install MarkText using a package manager such as [Chocolatey](https://chocolatey.org/) or [Winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/).
-
-To use Chocolatey, you need to have [Chocolatey](https://chocolatey.org/install) installed:
+打包安装包（在对应平台的主机上执行）：
 
 ```bash
-choco install marktext
+pnpm run build:mac    # macOS（arm64 / x64 可选）
+pnpm run build:win    # Windows（x64 / arm64 可选）
+pnpm run build:linux  # Linux
 ```
 
-To use Winget, you need to have [Winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/#install-winget) installed:
+产物输出在仓库根目录 `dist/`。**构建未签名**：macOS 首次启动若被
+Gatekeeper 拦截，执行 `xattr -cr /Applications/Elegant.app` 即可。
+
+日常开发规范、目录结构与测试命令见 [AGENTS.md](AGENTS.md)。
+
+## 与上游同步
+
+上游 [marktext/marktext](https://github.com/marktext/marktext) 活跃维护中，建议偶尔合并：
 
 ```bash
-winget install marktext
+git fetch upstream
+git merge upstream/develop
 ```
 
-#### Linux
+所有 Elegant 改动都隔离在 `packages/desktop` 内，正常情况下冲突很少。
 
-Please follow the [Linux installation instructions](https://marktext.me/docs/installation).
+## 许可证
 
-#### Other
-
-All binaries for Linux, macOS and Windows can be downloaded from the [release page](https://github.com/marktext/marktext/releases/latest). If a version is unavailable for your system, then please open an [issue](https://github.com/marktext/marktext/issues).
-
-## Development
-
-If you wish to build MarkText yourself, please check out our [build instructions](https://marktext.me/docs/dev/build).
-
-- [User documentation](https://marktext.me/docs/introduction)
-- [Developer documentation](https://marktext.me/docs/dev/overview)
-
-If you have any questions regarding MarkText, you are welcome to write an issue. When doing so please use the default format found when opening an issue. Of course, if you submit a PR directly, it will be greatly appreciated.
-
-## Contribution
-
-MarkText is in development, please make sure to read the [Contributing Guide](.github/CONTRIBUTING.md) before making a pull request. Want to add some features to MarkText? Refer to our [roadmap](https://github.com/marktext/marktext/projects) and open issues.
-
-## Contributors
-
-Thank you to all the people who have already contributed to MarkText[[contributors](https://github.com/marktext/marktext/graphs/contributors)].
-
-<a href="https://github.com/marktext/marktext/graphs/contributors"><img src="https://opencollective.com/marktext/contributors.svg?width=890" /></a>
-
-## License
-
-[**MIT**](LICENSE).
+[MIT](LICENSE) — 含原始版权声明与 Elegant 修改版权。Muya 编辑引擎及绝大部分代码的著作权归 MarkText 贡献者所有。
