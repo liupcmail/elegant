@@ -36,6 +36,31 @@ Elegant 的改动集中在桌面层（`packages/desktop`），编辑内核 Muya 
 |---|---|
 | ![light](docs/assets/elegant-light.png) | ![dark](docs/assets/elegant-dark.png) |
 
+## 安装（从 Releases 下载）
+
+1. 到 [Releases](https://github.com/liupcmail/elegant/releases) 页面下载对应架构的安装包（macOS Apple 芯片选 `elegant-mac-arm64-*.dmg`）
+2. 双击 DMG，将 **Elegant** 拖入 Applications
+
+### 首次启动被 macOS 拦截怎么办（重要）
+
+Elegant 是未签名应用，macOS 首次启动会弹出「**无法打开"Elegant"，因为无法验证开发者**」——这不是软件有问题，是 Gatekeeper 对所有未签名应用的默认行为。两种解除方式任选其一：
+
+**方式 A · 终端命令（推荐，一劳永逸）**
+
+```bash
+xattr -cr /Applications/Elegant.app
+```
+
+执行后再启动即可，之后不会再弹。
+
+**方式 B · 不用终端（图形界面）**
+
+1. 先双击启动一次，在弹出的警告框点「完成」（此时不会打开）
+2. 打开 **系统设置 → 隐私与安全性**，滚动到底部「安全性」区域，会看到「已阻止使用"Elegant"」的提示
+3. 点 **仍要打开** → 输入密码确认 → 再回去启动应用
+
+> Windows 自建版本若被 SmartScreen 拦截，点「更多信息 → 仍要运行」即可。
+
 ## 从源码构建
 
 环境要求：Node.js ≥ 22.12、pnpm ≥ 10（推荐用 corepack 管理）、Git。
